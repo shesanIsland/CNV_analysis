@@ -1,6 +1,5 @@
 ---
 title: "Whole Genome Sequencing analysis using bedtools and CNVpytor"
-caption: in a unix system
 output:
   html_document:
     df_print: paged
@@ -37,7 +36,9 @@ $sample1_bam="PATHtoFile/sample1_sorted.bam"
 $agamp4_bed="PATHtoFile/reference_sorted.bed"
 ```  
 <br>
-*optional*:
+
+*optional*
+<br>
 ```{bash}
 samtools view $sample1_bam | less -S #view to check .bam file
 samtools coverage $sample1_bam #view depth and other stats
@@ -97,6 +98,8 @@ $ref_genome_conf=$resultsdir/ref_genome_conf.py
 
 <br>
 Create a *.pytor* file and import config file and read depth (rd) signals from sample's *.bam* file for your specified chromosomes/ sequences
+<br>
+
 ```{bash}
 cnvpytor -conf $ref_genome_conf \
 -root $resultsdir/sample1.pytor \
